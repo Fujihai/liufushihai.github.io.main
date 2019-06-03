@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{ font-family: serif; }
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+img{
+  clear: both;
+  display: block;
+  margin: auto;
+}
+
+.wrap{
+  margin: 0 auto;
+  position: relative;
+  width: 800px;
+}
+
+.clearfix:after{
+  content: '';
+  display: block;
+  height: 0;
+  line-height: 0;
+  clear: both;
+  zoom: 1;
+}
+
+.align-center {
+  clear: both;
+  display: block;
+  margin: auto;
+}
+
+/* 布局样式 */
+.header{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  background: #fff;
+}
+
+.header-title{
+  padding-top: 1rem;
+  float: left;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: 'Merriweather','Georgia',serif;
+}
+
+.header-nav{
+  float: right;
+}
+
+.header-nav > ul{
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  padding: 1.6875rem 0 0;
+}
+
+.header-nav li a{
+  height: 100%;
+  display: inline-block;
+}
+
+.scroll-header-shadow{
+  box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.26);
+  transition: box-shadow .2s ease-in-out;
+}
+
+.nav-item{
+  float: left;
+  margin: 0 .5625rem;
+  padding: 0rem .75rem 0.9rem .75rem;
+  height: 100%;
+  border-bottom-width: 0;
+  transition: border-bottom-width .1s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+
+.nav-item:hover {
+  border-color: #dfe1e5;
+  border-bottom-style: solid;
+  border-bottom-width: .25rem;
+}
+
+.title-item{
+  display: inline-block;
+  padding: 10px 0px;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.title-item:hover{
+  text-decoration: underline;
+}
+
+.load-more-btn{
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  width: 8rem;
+  color: #FFF;
+  background: #BDBDCE;
+}
+
+.load-more-btn:hover{
+  background: #3700B3;
+  border-width: 2px;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.26);
+  transition: box-shadow .2s ease-in-out; 
+}
+
+/* 文章列表样式 */
+.articles{
+  margin-top: 4rem;
+}
+
+.article{
+  margin-top: 4.5rem;
+}
+
+.article-title {
+  margin: 20px 0;
+  padding-bottom: 10px;
+  line-height: 1.5em;
+  border-bottom: 1px dashed #eee;
+  text-align: center;
+  font-size: 2em;
+}
+
+.articles-title-list > li{
+  list-style: none;
+}
+
+/* 文章内容样式 */
+.article-content{
+  padding-bottom: 1.5rem;
+}
+
+/* 底部样式 */
+footer{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Merriweather','Georgia',serif;
+  color: gray;
+}
+
+.footer-link{
+  color: blue;
+}
+
+.footer-link:hover{
+  text-decoration: underline;
+}
+
+

@@ -1,1 +1,0 @@
-console.log("main.js加载完成！");

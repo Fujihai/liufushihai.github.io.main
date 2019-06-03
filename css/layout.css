@@ -1,0 +1,57 @@
+/* 页面主体布局的样式 */
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Serif;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+img{
+  clear: both;
+  display: block;
+  margin: auto;
+}
+
+.wrap{
+  margin: 0 auto;
+  position: relative;
+  width: 900px;
+}
+
+.clearfix:after{
+  content: '';
+  display: block;
+  height: 0;
+  line-height: 0;
+  clear: both;
+  zoom: 1;
+} */
+
+/* header区域 */
+.header{
+  /* background: #fff; */
+  /* height: 4rem; */
+  /* width: 100%; */
+  /* left: 0; */
+  /* margin: 0 auto; */
+  /* position: fixed; */
+  /* text-align:center; */
+  /* top: 0; */
+  /* z-index: 100; */
+}
+
+/* 文章区域 */
+.articles{
+  /* margin-top: 4rem; */
+}
+.content{
+  /* margin: 20px 0px; */
+}
