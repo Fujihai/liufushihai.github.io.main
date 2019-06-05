@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body{ font-family: serif; }
+body{ font-family: serif;}
 
 a{
   text-decoration: none;
@@ -22,7 +22,6 @@ img{
 .wrap{
   margin: 0 auto;
   position: relative;
-  width: 800px;
 }
 
 .clearfix:after{
@@ -40,7 +39,6 @@ img{
   margin: auto;
 }
 
-/* 布局样式 */
 .header{
   position: fixed;
   z-index: 100;
@@ -112,11 +110,11 @@ img{
 
 .load-more-btn{
   display: block;
-  margin: 0 auto;
+  margin: 0.5rem auto 0rem auto;
   padding: 10px;
   text-align: center;
   font-size: 1.2rem;
-  border-radius: 10px;
+  border-radius: 2rem;
   width: 8rem;
   color: #FFF;
   background: #BDBDCE;
@@ -129,7 +127,6 @@ img{
   transition: box-shadow .2s ease-in-out; 
 }
 
-/* 文章列表样式 */
 .articles{
   margin-top: 4rem;
 }
@@ -151,12 +148,10 @@ img{
   list-style: none;
 }
 
-/* 文章内容样式 */
 .article-content{
   padding-bottom: 1.5rem;
 }
 
-/* 底部样式 */
 footer{
   position: relative;
   left: 0;
@@ -177,6 +172,27 @@ footer{
 
 .footer-link:hover{
   text-decoration: underline;
+}
+
+@media all and (max-width: 768px){
+  .wrap{
+    width: 100%;
+  }
+
+  .header-title,
+  .title-item{
+    padding-left: 2rem;
+  }
+
+  .article-content{
+    padding: 0 1.5rem 1.2rem 1.5rem;
+  }
+}
+
+@media all and (min-width: 768px){
+  .wrap{
+    width: 80%;
+  }
 }
 
 

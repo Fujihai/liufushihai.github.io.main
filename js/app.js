@@ -123,7 +123,6 @@ function isTheLastPage(pageIdx, lastPageIdx){
   return pageIdx < lastPageIdx ? true : false;
 }
 
-// 页面效果处理
 window.onscroll = function(){scrollFunction();};
 
 function scrollFunction(){
