@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>分页组件</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="pagination.css">
+</head>
+
+<body id="body">
+
+  <script src="../js/config.js"></script>
+  <script src="../js/util.js"></script>
+  <script src="../js/ajax.js"></script>
+  <script src="../js/app.js"></script>
+  
+  <script src="pagination.js"></script>
+
+  <script>
+    (function(){
+      return Pagination.init({
+        currentPage: 1,
+        pages: 8,
+        containerNode: document.body,
+        onPageClick: function(idx){
+          // console.log(idx);
+        }
+      });
+
+    })();
+  </script>
+</body>
+
+</html>

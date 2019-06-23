@@ -1,31 +1,34 @@
 @charset "utf-8";
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{ font-family: serif;}
+body {
+  font-family: "Roboto,sans-serif";
+  background: #fafafa;
+}
 
-a{
+a {
   text-decoration: none;
   color: #000;
 }
 
-img{
+img {
   clear: both;
   display: block;
   margin: auto;
 }
 
-.wrap{
+.wrap {
   margin: 0 auto;
   position: relative;
 }
 
-.clearfix:after{
-  content: '';
+.clearfix:after {
+  content: "";
   display: block;
   height: 0;
   line-height: 0;
@@ -39,7 +42,7 @@ img{
   margin: auto;
 }
 
-.header{
+.header {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -51,64 +54,62 @@ img{
   background: #fff;
 }
 
-.header-title{
+.header-title {
   padding-top: 1rem;
   float: left;
   font-size: 2rem;
-  font-weight: bolder;
-  font-family: 'Merriweather','Georgia',serif;
 }
 
-.header-nav{
+.header-nav {
   float: right;
 }
 
-.header-nav > ul{
+.header-nav > ul {
   text-align: center;
   display: inline-block;
   height: 100%;
   padding: 1.6875rem 0 0;
 }
 
-.header-nav li a{
+.header-nav li a {
   height: 100%;
   display: inline-block;
 }
 
-.scroll-header-shadow{
-  box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.26);
-  transition: box-shadow .2s ease-in-out;
+.scroll-header-shadow {
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.26);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
-.nav-item{
+.nav-item {
   float: left;
-  margin: 0 .5625rem;
-  padding: 0rem .75rem 0.9rem .75rem;
+  margin: 0 0.5625rem;
+  padding: 0rem 0.75rem 0.9rem 0.75rem;
   height: 100%;
   border-bottom-width: 0;
-  transition: border-bottom-width .1s cubic-bezier(.4,0,.2,1);
+  transition: border-bottom-width 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  font-size: 1rem;
 }
 
 .nav-item:hover {
   border-color: #dfe1e5;
   border-bottom-style: solid;
-  border-bottom-width: .25rem;
+  border-bottom-width: 0.25rem;
 }
 
-.title-item{
+.title-item {
   display: inline-block;
-  padding: 10px 0px;
-  color: #000;
-  font-size: 1.5rem;
-  font-weight: 900;
+  padding: 16px 32px;
+  color: #595959;
+  font-size: 16px;
 }
 
-.title-item:hover{
-  text-decoration: underline;
+.title-item:hover {
+  color: #4285f4;
 }
 
-.load-more-btn{
+.load-more-btn {
   display: block;
   margin: 0.5rem auto 0rem auto;
   padding: 10px;
@@ -116,22 +117,22 @@ img{
   font-size: 1.2rem;
   border-radius: 2rem;
   width: 8rem;
-  color: #FFF;
-  background: #BDBDCE;
+  color: #fff;
+  background: #bdbdce;
 }
 
-.load-more-btn:hover{
-  background: #3700B3;
+.load-more-btn:hover {
+  background: #3700b3;
   border-width: 2px;
-  box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.26);
-  transition: box-shadow .2s ease-in-out; 
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.26);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
-.articles{
+.articles {
   margin-top: 4rem;
 }
 
-.article{
+.article {
   margin-top: 4.5rem;
 }
 
@@ -144,15 +145,25 @@ img{
   font-size: 2em;
 }
 
-.articles-title-list > li{
+.articles-title-list {
+  margin-top: 6rem;
+  padding-top: 16px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.26);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.articles-title-list > li {
   list-style: none;
 }
 
-.article-content{
+.article-content {
   padding-bottom: 1.5rem;
 }
 
-footer{
+footer {
   position: relative;
   left: 0;
   bottom: 0;
@@ -162,37 +173,34 @@ footer{
   line-height: 4rem;
   text-align: center;
   font-size: 15px;
-  font-family: 'Merriweather','Georgia',serif;
   color: gray;
 }
 
-.footer-link{
+.footer-link {
   color: blue;
 }
 
-.footer-link:hover{
+.footer-link:hover {
   text-decoration: underline;
 }
 
-@media all and (max-width: 768px){
-  .wrap{
+@media all and (max-width: 768px) {
+  .wrap {
     width: 100%;
   }
 
   .header-title,
-  .title-item{
+  .title-item {
     padding-left: 2rem;
   }
 
-  .article-content{
+  .article-content {
     padding: 0 1.5rem 1.2rem 1.5rem;
   }
 }
 
-@media all and (min-width: 768px){
-  .wrap{
-    width: 80%;
+@media all and (min-width: 768px) {
+  .wrap {
+    width: 55%;
   }
 }
-
-
