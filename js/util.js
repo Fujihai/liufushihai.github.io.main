@@ -42,13 +42,9 @@ getIssuesPreUrl = function(){
     return getBasePreUrl() + '/issues';
 }
 
-// https://api.github.com/repos/pengliheng/pengliheng.github.io/labels
 getLabelsUrl = function(){
     return getBasePreUrl() + '/labels';
 }
-
-// https://api.github.com/repos/pengliheng/pengliheng.github.io/issues?labels=javaScript
-// https://api.github.com/repos/travis-ci/travis-ci/issues?labels=bug
 
 getIssueUrlById = function(id){
     var preUrl = getIssuesPreUrl();

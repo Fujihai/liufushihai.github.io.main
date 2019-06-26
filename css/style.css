@@ -109,25 +109,6 @@ img {
   color: #4285f4;
 }
 
-.load-more-btn {
-  display: block;
-  margin: 0.5rem auto 0rem auto;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.2rem;
-  border-radius: 2rem;
-  width: 8rem;
-  color: #fff;
-  background: #bdbdce;
-}
-
-.load-more-btn:hover {
-  background: #3700b3;
-  border-width: 2px;
-  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.26);
-  transition: box-shadow 0.2s ease-in-out;
-}
-
 .articles {
   margin-top: 4rem;
 }
@@ -160,7 +141,33 @@ img {
 }
 
 .article-content {
-  padding-bottom: 1.5rem;
+  margin-top: 5rem;
+  background: #fff;
+  padding: 1.5rem 16px 1.5rem 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.26);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.backTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 101;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.backTopBtn:hover {
+  background-color: #555;
 }
 
 footer {
@@ -201,6 +208,6 @@ footer {
 
 @media all and (min-width: 768px) {
   .wrap {
-    width: 55%;
+    width: 60%;
   }
 }

@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, 
-		initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
-		<title>Leif's blog</title>
-		<link href="imgs/favicon.ico" rel="shortcut icon"/>
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/pagination.css">
-		<link rel="stylesheet" href="css/github-markdown.css">
-	</head>
-	<body>
-		<header class="header" id="header">
-			<main class="wrap clearfix">
-				<a href="./index.html"><span id="header-title" class="header-title">Leif</span></a>
-				<nav class="header-nav">
-					<ul>
-						<!-- <li class="nav-item"><a href="">文章</a></li> -->
-						<!-- <li class="nav-item"><a href="">标签</a></li> -->
-					</ul>
-				</nav>
-			</main>
-		</header>
-		<article id="articles" class="articles">
-			<main class="wrap clearfix">
-				<ul id="articles-title-list" class="articles-title-list">
-				</ul>
-			</main>
-		</article>
-		<article id="article" class="article">
-			<main class="wrap clearfix">
-				<h1 id="article-content-title" class="article-title"></h1>
-				<article>
-						<div id="article-content" class="markdown-body article-content"></div>
-				</article>
-			</main>
-		</article>
-		<footer>
-			<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;<a href="https://github.com/liufushihai" class="footer-link">liufushihai</a>&nbsp;&nbsp;2019</p>
-		</footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, 
+		initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Leif's blog</title>
+    <link href="imgs/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pagination.css" />
+    <link rel="stylesheet" href="css/github-markdown.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <main class="wrap clearfix">
+        <a href="./index.html"
+          ><span id="header-title" class="header-title">Leif</span></a
+        >
+        <nav class="header-nav">
+          <ul>
+            <!-- <li class="nav-item"><a href="">文章</a></li> -->
+            <!-- <li class="nav-item"><a href="">标签</a></li> -->
+          </ul>
+        </nav>
+      </main>
+    </header>
+    <article id="articles" class="articles">
+      <main class="wrap clearfix">
+        <ul id="articles-title-list" class="articles-title-list"></ul>
+      </main>
+    </article>
+    <article id="article" class="article">
+      <button
+        onclick="topFunction()"
+        id="backTopBtn"
+        class="backTopBtn"
+        title="返回顶部"
+      >
+        Top
+      </button>
+      <main class="wrap clearfix">
+        <article class="article-content">
+          <h1 id="article-content-title" class="article-title"></h1>
+          <div id="article-content" class="markdown-body"></div>
+        </article>
+      </main>
+    </article>
+    <footer>
+      <p>
+        Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;<a
+          href="https://github.com/liufushihai"
+          class="footer-link"
+          >liufushihai</a
+        >&nbsp;&nbsp;2019
+      </p>
+    </footer>
 
-		<script src="js/config.js"></script>
-		<script src="js/util.js"></script>
-		<script src="js/ajax.js"></script>
-		<script src="js/pagination.js"></script>
-		<script src="js/app.js"></script>
-		<script>
-				var id = +loadPageUrlVar('p');
-				if(id){
-					hideElement('articles');
-					showElement('article');
-					gotoArticleContentPage(id);
-				}else{
-					hideElement('article');
-					showElement('articles');
-					gotoArticlesListPage();
-				}
-		</script>
-	</body>
+    <script src="js/config.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      var id = +loadPageUrlVar("p");
+      if (id) {
+        hideElement("articles");
+        showElement("article");
+        gotoArticleContentPage(id);
+      } else {
+        hideElement("article");
+        showElement("articles");
+        gotoArticlesListPage();
+      }
+    </script>
+  </body>
 </html>

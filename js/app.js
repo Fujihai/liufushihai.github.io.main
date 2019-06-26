@@ -70,32 +70,6 @@ function addTitleToArticleList(data) {
   }
 }
 
-function loadMoreArticlesToList(pageIdx) {
-  var titleList = getElementById("articles-title-list"),
-    li = createElementByTagName("li"),
-    href = createElementByTagName("a"),
-    txt = document.createTextNode("加载更多");
-  li.id = "loading-more-li";
-  li.className = "align-center";
-  titleList.appendChild(li);
-  href.id = "load-more-btn";
-  href.className = "align-center load-more-btn";
-  // href.href = "javascript:loadPage("+ (pageIdx + 1) +");";
-
-  // 打印数据
-  // href.onclick = function(){
-  //   getJSON(getLabelsUrl(), function(data, headers){
-  //     console.log(data);
-  //     for(var i = 0; i < data.length; i++){
-  //       console.log(data[i].name);
-  //     }
-  //   });
-  // };
-
-  href.appendChild(txt);
-  li.appendChild(href);
-}
-
 function removeLoadingGif() {
   removeChildById(getElementById("articles-title-list"), "large-gif-container");
 }
@@ -140,7 +114,6 @@ function generatePagination() {
     pages: 8,
     containerNode: titleItem,
     onPageClick: function(idx) {
-      console.log(`当前页：${idx}`);
       getJSON(getPageUrl(idx), function(data, headers) {
         updateTitleItems(data);
       });
@@ -163,7 +136,15 @@ window.onscroll = function() {
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     getElementById("header").className = "header scroll-header-shadow";
+    getElementById("backTopBtn").style.display = "block";
   } else {
     getElementById("header").className = "header";
+    getElementById("backTopBtn").style.display = "none";
   }
+}
+
+function topFunction(){
+  console.log('返回顶部');
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
